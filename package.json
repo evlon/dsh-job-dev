@@ -1,0 +1,18 @@
+{
+  "name": "@evlon/dsh-job-dev",
+  "version": "0.1.0",
+  "description": "dev 数字员工岗位包：preset（岗位 persona + skill 加载）+ skill（岗位专项方法）单目录平铺，安装后落为岗位 preset 与技能",
+  "license": "MIT",
+  "files": [
+    "agent.cordis.yml",
+    "preset.yml",
+    "SKILL.md",
+    "README.md"
+  ],
+  "scripts": {
+    "pack:list": "npm pack --dry-run"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
