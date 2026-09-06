@@ -8,9 +8,9 @@ dev 数字员工岗位包（每岗位一个独立包，与 dsh-job-secretary 同
 |---|---|---|
 | `agent.cordis.yml` | `$DSH_HOME/.agent-presets/dev/` | 岗位 preset 组合：岗位 persona + skill 加载 |
 | `preset.yml` | `$DSH_HOME/.agent-presets/dev/` | preset 显示元数据 |
-| `SKILL.md` | `$DSH_HOME/skills/dev-job-skill/` | 岗位技能：岗位专项方法 |
+| `SKILL.md` | `$DSH_HOME/skills/dev/` | 岗位技能：岗位专项方法 |
 
-> preset id 与 skill name 不同：preset 目录名 `dev`，SKILL.md frontmatter `name: dev-job-skill`。
+> preset 与 skill 同名同位：preset 落 `$DSH_HOME/.agent-presets/dev/`，skill 落 `$DSH_HOME/skills/dev/`（SKILL.md frontmatter `name: dev`）。
 
 ## 安装
 
