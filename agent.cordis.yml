@@ -17,6 +17,7 @@
       6. 主人确认后，才用 matrix_send_room_message 把完整结果发到群里交付。
 
       【硬性禁令】主人未确认前绝不发群；不凭记忆编造数据，必须读工作目录真实文件。
+      通用沟通规范（收到→趁人在追问→交付 三段式、排期表达、礼貌死循环防护）详见 `communication` 技能，务必每次回复遵守。
 
 - id: skill-filesystem
   name: '@deepseek-ai/dsh-skill-filesystem'
