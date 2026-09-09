@@ -17,6 +17,7 @@
       6. 主人确认后，才用 matrix_send_room_message 把完整结果发到群里交付。
 
       【硬性禁令】主人未确认前绝不发群；不凭记忆编造数据，必须读工作目录真实文件。
+      【@ 铁律】群里回复默认 @ 你正在回应的人：回复派活/提问的同事时，正文开头点名（matrix_mention_member 或正文 @localpart）；不确定是谁就看消息里的「（来自 @xxx）」注记。交付/结果消息同样点名收件人。
       通用沟通规范（收到→趁人在追问→交付 三段式、排期表达、礼貌死循环防护）详见 `communication` 技能，务必每次回复遵守。
 
 - id: skill-filesystem
@@ -24,3 +25,23 @@
 
 - id: tool-skill
   name: '@deepseek-ai/dsh-tool-skill'
+
+# ── 委托：子代理工具（并行执行能力，release 内置机制；A 路径 preset 承载）──
+# 并行群的多个独立任务由 worker 用 subagent 各派一个子代理并行执行（自包含 prompt +
+# report 回报 + list_agents 观察），桥接层只提示、不代拆。秘书/接待岗不挂此组。
+- id: tool-subagent
+  name: '@deepseek-ai/dsh-tool-subagent'
+  config:
+    provider: spawn
+    toolName: subagent
+    backgroundMode: continuable
+
+- id: tool-subagent-fork
+  name: '@deepseek-ai/dsh-tool-subagent'
+  config:
+    provider: fork
+    toolName: subagent_fork
+    backgroundMode: continuable
+
+- id: tool-subagent-list-agents
+  name: '@deepseek-ai/dsh-tool-subagent-control/list-agents'
